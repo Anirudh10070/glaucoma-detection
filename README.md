@@ -115,7 +115,6 @@ Code and trained weights: MIT (see [`LICENSE`](LICENSE)). The datasets keep thei
 
 ---
 
-[^1]: [NOTES §1: What was wrong with the original repo](NOTES.md#1-what-was-wrong-with-the-original-repo)
 [^2]: [NOTES §2: Training data: ORIGA](NOTES.md#2-training-data-origa)
 [^3]: [NOTES §3: External test set: VEIRC (New Delhi)](NOTES.md#3-external-test-set-veirc-new-delhi)
 [^4]: [NOTES §4: Train / validation / test split](NOTES.md#4-train--validation--test-split)
