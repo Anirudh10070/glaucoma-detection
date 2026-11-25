@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <div class="verdict {{ 'refer' if referable else 'ok' }}">
+    {% if referable %}
+      Refer for specialist review: the estimated probability of glaucoma is above the screening threshold.
+    {% else %}
+      Below the screening threshold: no referral suggested by the model.
+    {% endif %}
+  </div>
+  <p class="prob">Estimated P(glaucoma) = <strong>{{ '%.1f'|format(100*prob) }}%</strong>
+     &nbsp;·&nbsp; threshold {{ '%.1f'|format(100*threshold) }}%</p>
+  <div class="images">
+    <figure><img src="{{ model_input }}" alt="Model input"><figcaption>What the model saw ({{ view }} crop)</figcaption></figure>
+    <figure><img src="{{ heatmap }}" alt="Grad-CAM"><figcaption>Grad-CAM: regions that most raised the {{ 'glaucoma' if referable else 'normal' }} score</figcaption></figure>
+  </div>
+  <p class="note">The threshold was set on the validation set for about 85% sensitivity, as a screening operating point.
+     Grad-CAM shows where the model looked. It does not show that the reasoning is clinically correct.</p>
+  <a class="button" href="/">Analyse another image</a>
+</section>
+{% endblock %}

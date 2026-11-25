@@ -1,0 +1,17 @@
+{
+  "note": "Learning-rate selection on the ORIGA validation split, disc view, seed 42. Test/external sets were not used. [^23]",
+  "lr_3e-4": {
+    "best_epoch": 10,
+    "best_val_auc": 0.8067,
+    "val_loss_at_best": 1.0989,
+    "min_val_loss": 0.8653,
+    "epochs_run": 17
+  },
+  "lr_1e-4": {
+    "best_epoch": 6,
+    "best_val_auc": 0.8183,
+    "val_loss_at_best": 0.8376,
+    "min_val_loss": 0.8185,
+    "epochs_run": 13
+  }
+}

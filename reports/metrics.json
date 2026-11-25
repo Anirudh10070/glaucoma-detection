@@ -1,0 +1,213 @@
+{
+  "deployed_view": "disc",
+  "views": {
+    "disc": {
+      "meta": {
+        "arch": "efficientnet_b0",
+        "view": "disc",
+        "img_size": 224,
+        "platt_a": 1.2387241862255134,
+        "platt_b": -1.542569191766254,
+        "threshold": 0.18690431118011475,
+        "target_sensitivity": 0.85,
+        "best_epoch": 6,
+        "val_auc": 0.8183333333333335,
+        "seed": 42,
+        "train_counts": {
+          "pos": 118,
+          "neg": 337
+        }
+      },
+      "val": {
+        "n": 97,
+        "n_pos": 25,
+        "n_neg": 72,
+        "auc": 0.8183333333333335,
+        "auc_ci95": [
+          0.7107065026977787,
+          0.9135892984330484
+        ],
+        "sens_at_spec85": 0.6,
+        "threshold": 0.18690431118011475,
+        "sensitivity": 0.88,
+        "specificity": 0.6388888888888888,
+        "accuracy": 0.7010309278350515,
+        "confusion": {
+          "tp": 22,
+          "fn": 3,
+          "tn": 46,
+          "fp": 26
+        },
+        "ece": 0.06965792831993596,
+        "median_prob": {
+          "glaucoma": 0.49036309123039246,
+          "normal": 0.14630287885665894
+        },
+        "ece_uncalibrated": 0.2651882792256542
+      },
+      "test": {
+        "n": 98,
+        "n_pos": 25,
+        "n_neg": 73,
+        "auc": 0.8323287671232877,
+        "auc_ci95": [
+          0.7451917808219178,
+          0.9029066171923315
+        ],
+        "sens_at_spec85": 0.44,
+        "threshold": 0.18690431118011475,
+        "sensitivity": 0.92,
+        "specificity": 0.6027397260273972,
+        "accuracy": 0.6836734693877551,
+        "confusion": {
+          "tp": 23,
+          "fn": 2,
+          "tn": 44,
+          "fp": 29
+        },
+        "ece": 0.06432173887685853,
+        "median_prob": {
+          "glaucoma": 0.4290042221546173,
+          "normal": 0.13392794132232666
+        },
+        "ece_uncalibrated": 0.25002969284446874
+      },
+      "external": {
+        "n": 257,
+        "n_pos": 32,
+        "n_neg": 225,
+        "auc": 0.8630555555555555,
+        "auc_ci95": [
+          0.8140218425268545,
+          0.9066147322669684
+        ],
+        "sens_at_spec85": 0.625,
+        "threshold": 0.18690431118011475,
+        "sensitivity": 1.0,
+        "specificity": 0.24888888888888888,
+        "accuracy": 0.3424124513618677,
+        "confusion": {
+          "tp": 32,
+          "fn": 0,
+          "tn": 56,
+          "fp": 169
+        },
+        "ece": 0.19597593599256372,
+        "median_prob": {
+          "glaucoma": 0.5155171155929565,
+          "normal": 0.26442113518714905
+        },
+        "ece_uncalibrated": 0.4924679374909355
+      },
+      "external_suspect": {
+        "n": 107,
+        "median_prob": 0.3466447591781616,
+        "frac_referred": 0.8317757009345794
+      }
+    },
+    "full": {
+      "meta": {
+        "arch": "efficientnet_b0",
+        "view": "full",
+        "img_size": 224,
+        "platt_a": 1.345425844166058,
+        "platt_b": -1.3193983979824098,
+        "threshold": 0.2090383768081665,
+        "target_sensitivity": 0.85,
+        "best_epoch": 6,
+        "val_auc": 0.7961111111111112,
+        "seed": 42,
+        "train_counts": {
+          "pos": 118,
+          "neg": 337
+        }
+      },
+      "val": {
+        "n": 97,
+        "n_pos": 25,
+        "n_neg": 72,
+        "auc": 0.7961111111111112,
+        "auc_ci95": [
+          0.6784785479925897,
+          0.9033384703196347
+        ],
+        "sens_at_spec85": 0.48,
+        "threshold": 0.2090383768081665,
+        "sensitivity": 0.88,
+        "specificity": 0.5972222222222222,
+        "accuracy": 0.6701030927835051,
+        "confusion": {
+          "tp": 22,
+          "fn": 3,
+          "tn": 43,
+          "fp": 29
+        },
+        "ece": 0.10996624462536929,
+        "median_prob": {
+          "glaucoma": 0.4094020128250122,
+          "normal": 0.15858912467956543
+        },
+        "ece_uncalibrated": 0.2588714752154252
+      },
+      "test": {
+        "n": 98,
+        "n_pos": 25,
+        "n_neg": 73,
+        "auc": 0.7999999999999999,
+        "auc_ci95": [
+          0.7041588718820863,
+          0.8851509353741496
+        ],
+        "sens_at_spec85": 0.4,
+        "threshold": 0.2090383768081665,
+        "sensitivity": 0.92,
+        "specificity": 0.6712328767123288,
+        "accuracy": 0.7346938775510204,
+        "confusion": {
+          "tp": 23,
+          "fn": 2,
+          "tn": 49,
+          "fp": 24
+        },
+        "ece": 0.10752246224758574,
+        "median_prob": {
+          "glaucoma": 0.37963178753852844,
+          "normal": 0.14294855296611786
+        },
+        "ece_uncalibrated": 0.23099364766052788
+      },
+      "external": {
+        "n": 257,
+        "n_pos": 32,
+        "n_neg": 225,
+        "auc": 0.7745833333333333,
+        "auc_ci95": [
+          0.7001483841412628,
+          0.8433159958873059
+        ],
+        "sens_at_spec85": 0.4375,
+        "threshold": 0.2090383768081665,
+        "sensitivity": 0.96875,
+        "specificity": 0.47555555555555556,
+        "accuracy": 0.5369649805447471,
+        "confusion": {
+          "tp": 31,
+          "fn": 1,
+          "tn": 107,
+          "fp": 118
+        },
+        "ece": 0.16349209774039133,
+        "median_prob": {
+          "glaucoma": 0.3860565423965454,
+          "normal": 0.21483126282691956
+        },
+        "ece_uncalibrated": 0.407893358704413
+      },
+      "external_suspect": {
+        "n": 107,
+        "median_prob": 0.2580006718635559,
+        "frac_referred": 0.6074766355140186
+      }
+    }
+  }
+}

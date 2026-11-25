@@ -1,0 +1,28 @@
+:root { --bg: #f7f7f5; --fg: #1d1d1f; --muted: #6b6b70; --card: #fff; --line: #e3e3e0;
+        --ok: #1f7a4d; --refer: #b4401f; --accent: #2b59c3; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); }
+header, main, footer { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+header { padding-top: 32px; }
+h1 { margin: 0; font-size: 28px; }
+.sub { margin: 4px 0 24px; color: var(--muted); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+.card h2 { margin-top: 0; font-size: 20px; }
+input[type=file] { display: block; margin: 16px 0; }
+button, .button { display: inline-block; background: var(--accent); color: #fff; border: 0; border-radius: 8px;
+                  padding: 10px 18px; font-size: 15px; cursor: pointer; text-decoration: none; }
+.error { color: var(--refer); font-weight: 600; }
+.verdict { padding: 14px 16px; border-radius: 8px; font-weight: 600; }
+.verdict.ok { background: #e6f4ec; color: var(--ok); }
+.verdict.refer { background: #fbeae4; color: var(--refer); }
+.prob { font-size: 18px; }
+.images { display: flex; gap: 20px; flex-wrap: wrap; }
+figure { margin: 0; flex: 1 1 260px; }
+figure img { width: 100%; border-radius: 8px; border: 1px solid var(--line); }
+figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+.note { font-size: 14px; color: var(--muted); }
+footer { padding: 24px 20px 48px; }
+.warn { font-size: 14px; background: #fff7e0; border: 1px solid #f0dc9c; padding: 10px 14px; border-radius: 8px; }
+table.metrics { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 16px; }
+table.metrics caption { text-align: left; color: var(--muted); padding-bottom: 6px; }
+table.metrics th, table.metrics td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<form class="card" action="/detect" method="post" enctype="multipart/form-data">
+  <h2>Upload a colour fundus photograph</h2>
+  <p>Posterior-pole image with the optic disc visible (JPG, PNG or TIFF, up to 15&nbsp;MB).
+     The image is processed in memory and is not stored.</p>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  <input type="file" name="image" accept=".jpg,.jpeg,.png,.tif,.tiff,.bmp" required>
+  <button type="submit">Analyse</button>
+</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nethralaya: glaucoma screening demo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Nethralaya</h1>
+    <p class="sub">Glaucoma screening from fundus photographs, as a research demo</p>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer>
+    <p class="warn">Research prototype, <strong>not a medical device</strong>. It has not been
+      clinically validated and must not be used to diagnose or rule out disease.</p>
+    {% set t = report.test %}{% set e = report.external %}
+    <table class="metrics">
+      <caption>Performance of the model being served ({{ view }} view), measured by <code>scripts/evaluate.py</code></caption>
+      <tr><th></th><th>Internal test (ORIGA)</th><th>External test (VEIRC)</th></tr>
+      <tr><td>Images (glaucoma / normal)</td><td>{{ t.n_pos }} / {{ t.n_neg }}</td><td>{{ e.n_pos }} / {{ e.n_neg }}</td></tr>
+      <tr><td>AUC [95% CI]</td>
+        <td>{{ '%.3f'|format(t.auc) }} [{{ '%.2f'|format(t.auc_ci95[0]) }}–{{ '%.2f'|format(t.auc_ci95[1]) }}]</td>
+        <td>{{ '%.3f'|format(e.auc) }} [{{ '%.2f'|format(e.auc_ci95[0]) }}–{{ '%.2f'|format(e.auc_ci95[1]) }}]</td></tr>
+      <tr><td>Sensitivity at threshold</td><td>{{ '%.0f'|format(100*t.sensitivity) }}%</td><td>{{ '%.0f'|format(100*e.sensitivity) }}%</td></tr>
+      <tr><td>Specificity at threshold</td><td>{{ '%.0f'|format(100*t.specificity) }}%</td><td>{{ '%.0f'|format(100*e.specificity) }}%</td></tr>
+    </table>
+  </footer>
+</body>
+</html>
