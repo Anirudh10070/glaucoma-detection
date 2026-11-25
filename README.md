@@ -4,7 +4,6 @@ A reproducible glaucoma-vs-normal classifier for colour fundus images: data pipe
 
 > **Research prototype, not a medical device.** Glaucoma is diagnosed from intraocular pressure, visual fields and OCT as well as the optic disc. This model can at most help *triage for referral*.[^31]
 
-This is a from-scratch rebuild of [`Takshak-CS/Web-Nethralaya_V1`](https://github.com/Takshak-CS/Web-Nethralaya_V1). That repo's README claimed ResNet50, ROP detection and 97% accuracy; its code is a ResNet18 glaucoma-only model with hard-coded metrics.[^1] Only the idea and the name were kept.[^33]
 
 ## Results
 
