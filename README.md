@@ -1,10 +1,5 @@
 # Nethralaya: glaucoma screening from fundus photographs
 
-A reproducible glaucoma-vs-normal classifier for colour fundus images: data pipeline, training, calibrated evaluation with **external validation**, Grad-CAM, and a privacy-preserving Flask demo. Every design decision is footnoted; the footnotes link to [`NOTES.md`](NOTES.md), and [`docs/INTERVIEW.md`](docs/INTERVIEW.md) condenses them for interview prep.
-
-> **Research prototype, not a medical device.** Glaucoma is diagnosed from intraocular pressure, visual fields and OCT as well as the optic disc. This model can at most help *triage for referral*.[^31]
-
-
 ## Results
 
 EfficientNet-B0 on the optic-disc crop, selected on validation AUC.[^24] The numbers below come from [`reports/metrics.json`](reports/metrics.json). The web app reads the same file, so nothing is hard-coded.[^27]
